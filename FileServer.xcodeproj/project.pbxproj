@@ -8,23 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		FC073D6C1E50FC5A00A5E625 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D6B1E50FC5A00A5E625 /* main.swift */; };
+		FC073D731E50FC7A00A5E625 /* SocketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D721E50FC7A00A5E625 /* SocketError.swift */; };
+		FC073D751E50FD6A00A5E625 /* Aliases+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D741E50FD6A00A5E625 /* Aliases+Constants.swift */; };
+		FC073D771E5101C600A5E625 /* String+Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D761E5101C600A5E625 /* String+Socket.swift */; };
+		FC073D791E5102E700A5E625 /* ContentProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */; };
+		FC073D7C1E510A9000A5E625 /* FileHandlerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D7B1E510A9000A5E625 /* FileHandlerError.swift */; };
+		FC073D7E1E510E1C00A5E625 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC073D7A1E51043100A5E625 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FC073D661E50FC5A00A5E625 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				FC073D7E1E510E1C00A5E625 /* index.html in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC073D681E50FC5A00A5E625 /* FileServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FileServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC073D6B1E50FC5A00A5E625 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FC073D721E50FC7A00A5E625 /* SocketError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketError.swift; sourceTree = "<group>"; };
+		FC073D741E50FD6A00A5E625 /* Aliases+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aliases+Constants.swift"; sourceTree = "<group>"; };
+		FC073D761E5101C600A5E625 /* String+Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Socket.swift"; sourceTree = "<group>"; };
+		FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentProviderProtocol.swift; sourceTree = "<group>"; };
+		FC073D7A1E51043100A5E625 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		FC073D7B1E510A9000A5E625 /* FileHandlerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHandlerError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +70,13 @@
 		FC073D6A1E50FC5A00A5E625 /* FileServer */ = {
 			isa = PBXGroup;
 			children = (
+				FC073D721E50FC7A00A5E625 /* SocketError.swift */,
+				FC073D7B1E510A9000A5E625 /* FileHandlerError.swift */,
+				FC073D741E50FD6A00A5E625 /* Aliases+Constants.swift */,
+				FC073D761E5101C600A5E625 /* String+Socket.swift */,
+				FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */,
 				FC073D6B1E50FC5A00A5E625 /* main.swift */,
+				FC073D7A1E51043100A5E625 /* index.html */,
 			);
 			path = FileServer;
 			sourceTree = "<group>";
@@ -120,7 +139,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC073D751E50FD6A00A5E625 /* Aliases+Constants.swift in Sources */,
+				FC073D791E5102E700A5E625 /* ContentProviderProtocol.swift in Sources */,
+				FC073D771E5101C600A5E625 /* String+Socket.swift in Sources */,
 				FC073D6C1E50FC5A00A5E625 /* main.swift in Sources */,
+				FC073D731E50FC7A00A5E625 /* SocketError.swift in Sources */,
+				FC073D7C1E510A9000A5E625 /* FileHandlerError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
