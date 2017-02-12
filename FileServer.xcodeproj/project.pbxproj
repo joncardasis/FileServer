@@ -14,6 +14,7 @@
 		FC073D791E5102E700A5E625 /* ContentProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */; };
 		FC073D7C1E510A9000A5E625 /* FileHandlerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D7B1E510A9000A5E625 /* FileHandlerError.swift */; };
 		FC073D7E1E510E1C00A5E625 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC073D7A1E51043100A5E625 /* index.html */; };
+		FC073D811E5110EA00A5E625 /* Maroon5-logo.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC073D7F1E5110D600A5E625 /* Maroon5-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				FC073D811E5110EA00A5E625 /* Maroon5-logo.png in CopyFiles */,
 				FC073D7E1E510E1C00A5E625 /* index.html in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +40,7 @@
 		FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentProviderProtocol.swift; sourceTree = "<group>"; };
 		FC073D7A1E51043100A5E625 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		FC073D7B1E510A9000A5E625 /* FileHandlerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHandlerError.swift; sourceTree = "<group>"; };
+		FC073D7F1E5110D600A5E625 /* Maroon5-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Maroon5-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +79,18 @@
 				FC073D761E5101C600A5E625 /* String+Socket.swift */,
 				FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */,
 				FC073D6B1E50FC5A00A5E625 /* main.swift */,
-				FC073D7A1E51043100A5E625 /* index.html */,
+				FC073D801E5110DD00A5E625 /* Resources */,
 			);
 			path = FileServer;
+			sourceTree = "<group>";
+		};
+		FC073D801E5110DD00A5E625 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC073D7A1E51043100A5E625 /* index.html */,
+				FC073D7F1E5110D600A5E625 /* Maroon5-logo.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

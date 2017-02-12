@@ -13,10 +13,10 @@ enum HTTP {
 }
 
 /* Darwin bindings */
-public let socket_bind = Darwin.bind
+public let socket_bind   = Darwin.bind
 public let socket_listen = Darwin.listen
-public let socket_write = Darwin.write
-public let socket_send = Darwin.send
+public let socket_send   = Darwin.send
+public let socket_read   = Darwin.read
 
 
 /* Socket aliases for common types */

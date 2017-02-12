@@ -23,7 +23,8 @@ func bind(sock: FileDescriptor, port: Port) throws {
     
     var serveraddr = sockaddr_in()
     serveraddr.sin_family = sa_family_t(AF_INET)
-    serveraddr.sin_port = in_port_t(htons(in_port_t(port)))
+    //serveraddr.sin_port = in_port_t(htons(in_port_t(port)))
+    serveraddr.sin_port = in_port_t(Port(port).bigEndian)
     serveraddr.sin_addr = in_addr(s_addr: INADDR_ANY)
     
     let res = socket_bind(sock, sockaddr_cast(&serveraddr), socklen_t(socklen))
@@ -51,8 +52,8 @@ func sendDataPacket(to client: FileDescriptor, _ data: [UInt8]) {
 
 
 
-func fileRequested(_ filename: String/*,in directory: URL*/) throws -> [UInt8] {
-    guard let filepath = Bundle.main.url(forResource: "index", withExtension: "html") else {
+func fileRequested(_ filename: String, in subdirectory: String?) throws -> [UInt8] {
+    guard let filepath = Bundle.main.url(forResource: filename, withExtension: nil, subdirectory: subdirectory) else {
         throw FileHandlerError.fileNotFound
     }
     
@@ -88,39 +89,53 @@ catch let e as SocketError {
 let html = "<html><body><center><h1>Hello Swift!</h1></center></body></html>"
 
 repeat {
+    /*
+     client_socket = accept(server_socket, sockaddr_cast(&client_addr), &client_addr_size)
+        client addr and addr_size should be of size socklen_t
+    */
+ 
     let clientSocket = accept(sock, nil, nil)
     
     // Get data packet from the client
-//    let messageBuffer = Array<UInt8>(repeating: 0, count: HTTP.packetSize)
-//    var bytesRead = 0
-//    while(bytesRead < HTTP.packetSize) {
-//        let dataLength = recv(clientSocket, UnsafeMutablePointer<UInt8>(OpaquePointer(messageBuffer)), HTTP.packetSize - bytesRead, 0) //TODO: should be a try
-//        if dataLength < 0 {
-//            print("ERROR recieving all packet data. Closing socket...")
-//            close(clientSocket)
-//            break
-//        }
-//        
-//        bytesRead += dataLength
-//    }
+    var messageBuffer = Array<CChar>(repeating: 0, count: HTTP.packetSize)
+    let dataLength = socket_read(clientSocket, &messageBuffer, messageBuffer.count)
     
+    if dataLength == -1 {
+        print("ERROR")
+        break
+    }
     
-    let htmlData = try! fileRequested("doesnt matter here since its hard coded for now")
+    // Convert from C char array to Swift String
+    let requestHeaders = String.from(messageBuffer)
+    print("Recieved: \(requestHeaders) \n in \(dataLength) bytes.")
+    //Assuming GET:
     
+    var resourceRequested = String(requestHeaders.characters.split(separator: " ")[1])
     
-    let lineBreak = "\r\n"
-    let headers = [
-        "HTTP/1.1 200 OK",
-        "Content-Type: text/html; charset=UTF-8",
-        "Server: Swifty Web Server",
-        "Content-length: \(htmlData.count)",
-        "Connection: close"
-        ].joined(separator: lineBreak) + lineBreak + lineBreak
+    if resourceRequested == "/" { // Override to index html
+        resourceRequested = "index.html"
+    }
     
-    print("Headers to Serve:\n\(headers)")
-    sendMessage(to: clientSocket, headers)
-    //sendMessage(to: clientSocket, html)
-    sendDataPacket(to: clientSocket, htmlData)
+    do {
+        let resourceData = try fileRequested(resourceRequested, in: nil)
+        
+        let lineBreak = "\r\n"
+        let headers = [
+            "HTTP/1.1 200 OK",
+            "Content-Type: text/html; charset=UTF-8",
+            "Server: Swifty Web Server",
+            "Content-length: \(resourceData.count)",
+            "Connection: close"
+            ].joined(separator: lineBreak) + lineBreak + lineBreak
+        
+        //print("Headers to Serve:\n\(headers)")
+        sendMessage(to: clientSocket, headers)
+        //sendMessage(to: clientSocket, html)
+        sendDataPacket(to: clientSocket, resourceData)
+        
+    } catch {
+        print("Error sending data. \(error)")
+    }
     
     close(clientSocket)
 } while(sock >= 0)
