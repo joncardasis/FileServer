@@ -10,11 +10,16 @@
 		FC073D6C1E50FC5A00A5E625 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D6B1E50FC5A00A5E625 /* main.swift */; };
 		FC073D731E50FC7A00A5E625 /* SocketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D721E50FC7A00A5E625 /* SocketError.swift */; };
 		FC073D751E50FD6A00A5E625 /* Aliases+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D741E50FD6A00A5E625 /* Aliases+Constants.swift */; };
-		FC073D771E5101C600A5E625 /* String+Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D761E5101C600A5E625 /* String+Socket.swift */; };
+		FC073D771E5101C600A5E625 /* String+DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D761E5101C600A5E625 /* String+DataManipulation.swift */; };
 		FC073D791E5102E700A5E625 /* ContentProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */; };
 		FC073D7C1E510A9000A5E625 /* FileHandlerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D7B1E510A9000A5E625 /* FileHandlerError.swift */; };
 		FC073D7E1E510E1C00A5E625 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC073D7A1E51043100A5E625 /* index.html */; };
 		FC073D811E5110EA00A5E625 /* Maroon5-logo.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC073D7F1E5110D600A5E625 /* Maroon5-logo.png */; };
+		FC073D831E52211600A5E625 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D821E52211600A5E625 /* Response.swift */; };
+		FC073D851E52211C00A5E625 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D841E52211C00A5E625 /* Request.swift */; };
+		FC073D871E52219000A5E625 /* ContentMIMEType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D861E52219000A5E625 /* ContentMIMEType.swift */; };
+		FC073D891E52220800A5E625 /* HttpStatus+HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D881E52220800A5E625 /* HttpStatus+HttpMethod.swift */; };
+		FC073D8B1E52307B00A5E625 /* MimeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D8A1E52307B00A5E625 /* MimeTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,11 +41,16 @@
 		FC073D6B1E50FC5A00A5E625 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FC073D721E50FC7A00A5E625 /* SocketError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketError.swift; sourceTree = "<group>"; };
 		FC073D741E50FD6A00A5E625 /* Aliases+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aliases+Constants.swift"; sourceTree = "<group>"; };
-		FC073D761E5101C600A5E625 /* String+Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Socket.swift"; sourceTree = "<group>"; };
+		FC073D761E5101C600A5E625 /* String+DataManipulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DataManipulation.swift"; sourceTree = "<group>"; };
 		FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentProviderProtocol.swift; sourceTree = "<group>"; };
 		FC073D7A1E51043100A5E625 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		FC073D7B1E510A9000A5E625 /* FileHandlerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHandlerError.swift; sourceTree = "<group>"; };
 		FC073D7F1E5110D600A5E625 /* Maroon5-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Maroon5-logo.png"; sourceTree = "<group>"; };
+		FC073D821E52211600A5E625 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		FC073D841E52211C00A5E625 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		FC073D861E52219000A5E625 /* ContentMIMEType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentMIMEType.swift; sourceTree = "<group>"; };
+		FC073D881E52220800A5E625 /* HttpStatus+HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HttpStatus+HttpMethod.swift"; sourceTree = "<group>"; };
+		FC073D8A1E52307B00A5E625 /* MimeTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +86,13 @@
 				FC073D721E50FC7A00A5E625 /* SocketError.swift */,
 				FC073D7B1E510A9000A5E625 /* FileHandlerError.swift */,
 				FC073D741E50FD6A00A5E625 /* Aliases+Constants.swift */,
-				FC073D761E5101C600A5E625 /* String+Socket.swift */,
+				FC073D761E5101C600A5E625 /* String+DataManipulation.swift */,
 				FC073D781E5102E700A5E625 /* ContentProviderProtocol.swift */,
 				FC073D6B1E50FC5A00A5E625 /* main.swift */,
+				FC073D841E52211C00A5E625 /* Request.swift */,
+				FC073D821E52211600A5E625 /* Response.swift */,
+				FC073D8C1E52308700A5E625 /* HTTP */,
+				FC073D861E52219000A5E625 /* ContentMIMEType.swift */,
 				FC073D801E5110DD00A5E625 /* Resources */,
 			);
 			path = FileServer;
@@ -91,6 +105,15 @@
 				FC073D7F1E5110D600A5E625 /* Maroon5-logo.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		FC073D8C1E52308700A5E625 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				FC073D881E52220800A5E625 /* HttpStatus+HttpMethod.swift */,
+				FC073D8A1E52307B00A5E625 /* MimeTypes.swift */,
+			);
+			name = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +175,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC073D751E50FD6A00A5E625 /* Aliases+Constants.swift in Sources */,
+				FC073D851E52211C00A5E625 /* Request.swift in Sources */,
 				FC073D791E5102E700A5E625 /* ContentProviderProtocol.swift in Sources */,
-				FC073D771E5101C600A5E625 /* String+Socket.swift in Sources */,
+				FC073D891E52220800A5E625 /* HttpStatus+HttpMethod.swift in Sources */,
+				FC073D771E5101C600A5E625 /* String+DataManipulation.swift in Sources */,
 				FC073D6C1E50FC5A00A5E625 /* main.swift in Sources */,
 				FC073D731E50FC7A00A5E625 /* SocketError.swift in Sources */,
 				FC073D7C1E510A9000A5E625 /* FileHandlerError.swift in Sources */,
+				FC073D831E52211600A5E625 /* Response.swift in Sources */,
+				FC073D871E52219000A5E625 /* ContentMIMEType.swift in Sources */,
+				FC073D8B1E52307B00A5E625 /* MimeTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +314,7 @@
 				FC073D711E50FC5A00A5E625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

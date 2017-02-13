@@ -108,9 +108,10 @@ repeat {
     // Convert from C char array to Swift String
     let requestHeaders = String.from(messageBuffer)
     print("Recieved: \(requestHeaders) \n in \(dataLength) bytes.")
-    //Assuming GET:
     
-    var resourceRequested = String(requestHeaders.characters.split(separator: " ")[1])
+    //Assuming GET:
+    //Get resource after GET space and before ?
+    var resourceRequested = String(requestHeaders.characters.split(separator: " ")[1].split(separator: "?")[0])
     
     if resourceRequested == "/" { // Override to index html
         resourceRequested = "index.html"

@@ -19,7 +19,7 @@ public extension String {
         return String(data: Data(bytes: byteData), encoding: .utf8) ?? ""
     }
     
-    /*
+    /**
      Returns the first string component up until a given Character
      - Parameter character: The character to read up until (exclusive)
      - Returns: String of self up until the provided Character
