@@ -20,6 +20,15 @@
 		FC073D871E52219000A5E625 /* ContentMIMEType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D861E52219000A5E625 /* ContentMIMEType.swift */; };
 		FC073D891E52220800A5E625 /* HttpStatus+HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D881E52220800A5E625 /* HttpStatus+HttpMethod.swift */; };
 		FC073D8B1E52307B00A5E625 /* MimeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D8A1E52307B00A5E625 /* MimeTypes.swift */; };
+		FC073D961E52570E00A5E625 /* FileServerCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D951E52570E00A5E625 /* FileServerCommonTests.swift */; };
+		FC073D9C1E52574A00A5E625 /* ServerTestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D9B1E52574A00A5E625 /* ServerTestsRequest.swift */; };
+		FC073DA11E536F7100A5E625 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D841E52211C00A5E625 /* Request.swift */; };
+		FC073DA21E536F7F00A5E625 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D821E52211600A5E625 /* Response.swift */; };
+		FC073DA31E536F8100A5E625 /* HttpStatus+HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D881E52220800A5E625 /* HttpStatus+HttpMethod.swift */; };
+		FC073DA41E536F8300A5E625 /* MimeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D8A1E52307B00A5E625 /* MimeTypes.swift */; };
+		FC073DA51E536F8500A5E625 /* ContentMIMEType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D861E52219000A5E625 /* ContentMIMEType.swift */; };
+		FC073DA61E536F8D00A5E625 /* String+DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC073D761E5101C600A5E625 /* String+DataManipulation.swift */; };
+		FC9F85A81E70B14900B0006E /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9F85A71E70B14900B0006E /* Server.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,10 +60,22 @@
 		FC073D861E52219000A5E625 /* ContentMIMEType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentMIMEType.swift; sourceTree = "<group>"; };
 		FC073D881E52220800A5E625 /* HttpStatus+HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HttpStatus+HttpMethod.swift"; sourceTree = "<group>"; };
 		FC073D8A1E52307B00A5E625 /* MimeTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeTypes.swift; sourceTree = "<group>"; };
+		FC073D931E52570E00A5E625 /* FileServerCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileServerCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC073D951E52570E00A5E625 /* FileServerCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileServerCommonTests.swift; sourceTree = "<group>"; };
+		FC073D971E52570E00A5E625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC073D9B1E52574A00A5E625 /* ServerTestsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTestsRequest.swift; sourceTree = "<group>"; };
+		FC9F85A71E70B14900B0006E /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FC073D651E50FC5A00A5E625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC073D901E52570E00A5E625 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -68,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				FC073D6A1E50FC5A00A5E625 /* FileServer */,
+				FC073D941E52570E00A5E625 /* FileServerCommonTests */,
 				FC073D691E50FC5A00A5E625 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				FC073D681E50FC5A00A5E625 /* FileServer */,
+				FC073D931E52570E00A5E625 /* FileServerCommonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +114,7 @@
 				FC073D6B1E50FC5A00A5E625 /* main.swift */,
 				FC073D841E52211C00A5E625 /* Request.swift */,
 				FC073D821E52211600A5E625 /* Response.swift */,
+				FC9F85A71E70B14900B0006E /* Server.swift */,
 				FC073D8C1E52308700A5E625 /* HTTP */,
 				FC073D861E52219000A5E625 /* ContentMIMEType.swift */,
 				FC073D801E5110DD00A5E625 /* Resources */,
@@ -116,6 +140,16 @@
 			name = HTTP;
 			sourceTree = "<group>";
 		};
+		FC073D941E52570E00A5E625 /* FileServerCommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC073D951E52570E00A5E625 /* FileServerCommonTests.swift */,
+				FC073D9B1E52574A00A5E625 /* ServerTestsRequest.swift */,
+				FC073D971E52570E00A5E625 /* Info.plist */,
+			);
+			path = FileServerCommonTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +170,23 @@
 			productReference = FC073D681E50FC5A00A5E625 /* FileServer */;
 			productType = "com.apple.product-type.tool";
 		};
+		FC073D921E52570E00A5E625 /* FileServerCommonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC073D981E52570E00A5E625 /* Build configuration list for PBXNativeTarget "FileServerCommonTests" */;
+			buildPhases = (
+				FC073D8F1E52570E00A5E625 /* Sources */,
+				FC073D901E52570E00A5E625 /* Frameworks */,
+				FC073D911E52570E00A5E625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FileServerCommonTests;
+			productName = FileServerCommonTests;
+			productReference = FC073D931E52570E00A5E625 /* FileServerCommonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -147,6 +198,10 @@
 				ORGANIZATIONNAME = "Jonathan Cardasis";
 				TargetAttributes = {
 					FC073D671E50FC5A00A5E625 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					FC073D921E52570E00A5E625 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -165,9 +220,20 @@
 			projectRoot = "";
 			targets = (
 				FC073D671E50FC5A00A5E625 /* FileServer */,
+				FC073D921E52570E00A5E625 /* FileServerCommonTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC073D911E52570E00A5E625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC073D641E50FC5A00A5E625 /* Sources */ = {
@@ -184,7 +250,23 @@
 				FC073D7C1E510A9000A5E625 /* FileHandlerError.swift in Sources */,
 				FC073D831E52211600A5E625 /* Response.swift in Sources */,
 				FC073D871E52219000A5E625 /* ContentMIMEType.swift in Sources */,
+				FC9F85A81E70B14900B0006E /* Server.swift in Sources */,
 				FC073D8B1E52307B00A5E625 /* MimeTypes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC073D8F1E52570E00A5E625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC073DA21E536F7F00A5E625 /* Response.swift in Sources */,
+				FC073DA41E536F8300A5E625 /* MimeTypes.swift in Sources */,
+				FC073D9C1E52574A00A5E625 /* ServerTestsRequest.swift in Sources */,
+				FC073DA31E536F8100A5E625 /* HttpStatus+HttpMethod.swift in Sources */,
+				FC073DA11E536F7100A5E625 /* Request.swift in Sources */,
+				FC073DA61E536F8D00A5E625 /* String+DataManipulation.swift in Sources */,
+				FC073DA51E536F8500A5E625 /* ContentMIMEType.swift in Sources */,
+				FC073D961E52570E00A5E625 /* FileServerCommonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +377,32 @@
 			};
 			name = Release;
 		};
+		FC073D991E52570E00A5E625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FileServerCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonathancardasis.FileServerCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FC073D9A1E52570E00A5E625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FileServerCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonathancardasis.FileServerCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -312,6 +420,15 @@
 			buildConfigurations = (
 				FC073D701E50FC5A00A5E625 /* Debug */,
 				FC073D711E50FC5A00A5E625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC073D981E52570E00A5E625 /* Build configuration list for PBXNativeTarget "FileServerCommonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC073D991E52570E00A5E625 /* Debug */,
+				FC073D9A1E52570E00A5E625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

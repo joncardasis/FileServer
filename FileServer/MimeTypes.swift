@@ -11,7 +11,7 @@ import Foundation
 /**
  HTTP MIME types
  */
-public class MimeTypes {
+public class MimeType {
     
     /**
      Returns HTTP MIME string type for an file extension key

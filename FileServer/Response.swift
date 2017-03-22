@@ -12,7 +12,6 @@ public protocol HttpResponseProtocol {
     func generateResponseData(for method: HTTPMethod) -> Data
 }
 
-
 public class Response: HttpResponseProtocol {
     
     /// HTTP Response Status Code
@@ -56,23 +55,33 @@ public class Response: HttpResponseProtocol {
      Sets Response body with contents of file and updates header for content-type
      - Parameter url: URL resource for the file to provide
      */
-    public func setBody(forFile url: URL?) {
+    public func setBody(file fileUrl: URL?) {
         enum FileError: Error { case foundNil }
         
         do {
-            guard let url = url else {
+            guard let fileUrl = fileUrl else {
                 throw FileError.foundNil
             }
             
-            let data = try Data(contentsOf: url)
+            let data = try Data(contentsOf: fileUrl)
             body = data
-            headers["Content-Type"] = MimeTypes.get(key: url.pathExtension)
+            headers["Content-Type"] = MimeType.get(key: fileUrl.pathExtension)
         }
         catch {
             //On error reading file data set http response status to error
             setError(.notFound)
         }
     }
+    
+    /**
+    Sets Response body with contents of data and updates the header for content-type
+     - Parameter data: Data to put into the body of the response
+     */
+    public func setBody(data: Data) {
+        body = data
+        headers["Content-Type"] = "application/octet-stream"
+    }
+    
     
     /**
      Creates formatted HTTP header data from the objects properties and returns as Data
